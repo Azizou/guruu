@@ -14,6 +14,9 @@ SOURCE= *.java
 
 Driver.class: Driver.java CrossCorrelation.class MaxCorrelation.class
 
+
+Correlation.class: Correlation.java
+
 #Make rule to clean the .class files
 
 clean:
