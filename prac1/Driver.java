@@ -76,7 +76,7 @@ public class Driver
       long t2 = System.nanoTime();
       System.out.println("Max is : " + maxcross + " value" + crossCor[maxcross] );
       
-      printArr(crossCor);
+      //printArr(crossCor);
       System.out.println((t1 -t0)/1000000 + " mili sec for cross correlation and " + (t2 -t1)/1000 + " micro sec for max " +  maxcross );
    }
    

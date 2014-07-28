@@ -62,12 +62,9 @@ public class Correlation
       //for(int i=0;   i<cross_correlation.length;i++)
         // System.out.println(cross_correlation[i] + " at position " + i);
       System.out.println("\nMax is : " + max[0]);
+            
       
-      int[] a = {1,2,3,4,5,6,7,8,9,10};
-      
-      
-     // test(a);
-     printArr(cross_correlation);
+     //printArr(cross_correlation);
       System.out.println((t1 -t0)/1000000 + " mili sec for cross correlation and " + (t2 -t1)/1000 + " micros sec for max " +max[0] );
    }
    

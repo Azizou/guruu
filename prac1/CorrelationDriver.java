@@ -70,19 +70,13 @@ public class CorrelationDriver
       
       
       MaxCorrelation max = new MaxCorrelation(crossCor,0,crossCor.length);
-<<<<<<< HEAD
       int maxcross = fjPool.invoke(max);
       
       long t2 = System.nanoTime();
       System.out.println("Max is : " + maxcross + " value" + crossCor[maxcross] );
       
       printArr(crossCor);
-=======
-      float maxcross = fjPool.invoke(max);
       
-      long t2 = System.nanoTime();
-      System.out.println("Max is : " + maxcross);
->>>>>>> 8b2da5d5dac89af46e7bdd911e85e7d6f839d98c
       System.out.println((t1 -t0)/1000000 + " mili sec for cross correlation and " + (t2 -t1)/1000 + " micro sec for max " +  maxcross );
    }
    
@@ -114,7 +108,6 @@ public class CorrelationDriver
       temp[1] = (float)i;
       return temp;
    }
-<<<<<<< HEAD
    
    static void printArr(float[] arr){
       for(int i=0; i<arr.length;i++)
@@ -123,6 +116,3 @@ public class CorrelationDriver
       }
    }
 }
-=======
-}
->>>>>>> 8b2da5d5dac89af46e7bdd911e85e7d6f839d98c
