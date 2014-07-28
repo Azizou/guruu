@@ -1,0 +1,21 @@
+﻿Answer to theory questions
+1- In our implementation of the hash table we used an array to store the items and the linear probing to resolve collision when the size of the table is less than 31 and Quadratic probing to resolve collision when the size is bigger than 31.  Given the input size, this hybrid only works as a linear probing implementation since the input size never exceed 31. 
+Given how small the input size is, a separate chaining implementation is more likely to be expensive if collision are frequent. The linear probing will take a relatively small incrementation to find a next free slot in the hash table.
+
+
+2-  I don't think a hybrid implementation will improve the efficiency with respect to our small input size. If for instance we are using both linear and quadratic probing, the quadratic probing is more likely to loop many times before finding a slot to insert the item, although the position 
+
+if say position 0, 1, 2 and 4 are occupied in a table of size 7, to insert an item that hashes to 0, using quadratic probing we have.
+First position 0 with I = 0;
+next position 0 + 1 with I =1
+next position 0+4 with I = 2
+next position 0+9 = 9 mod 7 2 with I = 3
+next position 0 + 16 = 16 mod 7 = 2 with I = 4
+next position 0 +25 = 25 mod 7 = 4 with I = 5
+next position 0 +36 = 36 mod 7 = 1 with I = 6
+next position 0 + 49 = 49 mod 7 = 0 with I = 7
+next position 0 + 64 = 64 mod 7 =1 with I = 8
+next position 0 + 81 = 81 mod 7 = 4 with I = 9
+next position 0 + 100 = 100 mod 7 = 2 with I = 10
+
+Unable to store after 10 incrementation of I, even thought position 3 is free. The quadratic probing does not allow efficient insertion with the load factor still below (4/7) = 0.6 which is less than 0.6. On the other hand the linear probing would have permit us to insert it in position 3 after try position 0,1 and 2. In the worst case it will iterate 0.6 * size = 0.0.6 * 7 = 5;

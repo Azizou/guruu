@@ -1,0 +1,23 @@
+#Make file for Assignment1 of CSC2002S 2014
+#COPY RIGHT ogbone Aziozu
+
+JAVAC=javac
+JFLAGS=-g
+
+SOURCE= *.java
+.SUFFIXES:.java .class
+
+#Default Rule
+
+.java.class:
+	$(JAVAC) $(JFLAGS) -verbose $<
+
+Driver.class: Driver.java CrossCorrelation.class MaxCorrelation.class
+
+#Make rule to clean the .class files
+
+clean:
+	@rm -f *.class 
+#$(SOURCE:.java.class)
+
+
