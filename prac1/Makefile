@@ -10,7 +10,7 @@ SOURCE= *.java
 #Default Rule
 
 .java.class:
-	$(JAVAC) $(JFLAGS) -verbose $<
+	$(JAVAC) $(JFLAGS) $<
 
 Driver.class: Driver.java CrossCorrelation.class MaxCorrelation.class
 
