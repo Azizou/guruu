@@ -65,7 +65,10 @@ public class Correlation
       
       int[] a = {1,2,3,4,5,6,7,8,9,10};
      // test(a);
+<<<<<<< HEAD
      printArr(cross_correlation);
+=======
+>>>>>>> 8b2da5d5dac89af46e7bdd911e85e7d6f839d98c
       System.out.println((t1 -t0)/1000000 + " mili sec for cross correlation and " + (t2 -t1)/1000 + " micros sec for max " +max[0] );
    }
    
@@ -158,10 +161,13 @@ public class Correlation
             
       }
    }
+<<<<<<< HEAD
    static void printArr(float[] arr){
       for(int i=0; i<arr.length;i++)
       {
          System.out.println("At index " +i + "we have " + arr[i]);
       }
    }
+=======
+>>>>>>> 8b2da5d5dac89af46e7bdd911e85e7d6f839d98c
 }

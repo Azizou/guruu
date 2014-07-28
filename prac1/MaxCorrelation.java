@@ -2,7 +2,11 @@ import java.util.concurrent.RecursiveTask;
 
 class MaxCorrelation extends RecursiveTask<Integer>
 {
+<<<<<<< HEAD
    static int SEQUENTIAL_THRESHOLD = 800;
+=======
+   static int SEQUENTIAL_THRESHOLD = 550;
+>>>>>>> 8b2da5d5dac89af46e7bdd911e85e7d6f839d98c
    
    int start=0;
    int stop=0;
@@ -39,7 +43,11 @@ class MaxCorrelation extends RecursiveTask<Integer>
          int firstMax = first.compute();
          int secondMax = second.join();
          
+<<<<<<< HEAD
          return (firstMax < secondMax) ? firstMax : secondMax;
+=======
+         return (firstMax > secondMax) ? firstMax : secondMax;
+>>>>>>> 8b2da5d5dac89af46e7bdd911e85e7d6f839d98c
 
       }
    }
