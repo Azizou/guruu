@@ -12,6 +12,7 @@ class CrossCorrelation extends RecursiveAction
    
    public CrossCorrelation(float[] transmition, float[] received, float[] crossCorrelation, int start, int stop)
    {
+	  SEQUENTIAL_THRESHOLD = Driver.SEQUENTIAL_THRESHOLD;
       this.start = start;
       this.stop = stop;
       this.crossCorrelation = crossCorrelation;
@@ -35,7 +36,6 @@ class CrossCorrelation extends RecursiveAction
                }
             }
             crossCorrelation[i]=sum;
-          //  printArr(crossCorrelation);
          }
       }
       else 
@@ -47,15 +47,7 @@ class CrossCorrelation extends RecursiveAction
          first.compute();
          second.join();
          
-         
       }
    }
-   void printArr(float[] arr){
-      for(int i=0; i<arr.length;i++)
-      {
-         System.out.println("At index " +i + "we have " + arr[i]);
-      }
-   }
-   
    
 }
