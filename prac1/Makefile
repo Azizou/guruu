@@ -4,7 +4,6 @@
 JAVAC=javac
 JFLAGS=-g
 
-SOURCE= "*.java"
 .SUFFIXES:.java .class
 
 #Default Rule
@@ -15,15 +14,18 @@ SOURCE= "*.java"
 DEFAULT: Driver.class CrossCorrelation.class MaxCorrelation.class Correlation.class
 
 #rebuild Driver.class
+
 Driver.class: Driver.java CrossCorrelation.class MaxCorrelation.class
 
-#rebuild Dorrelation.class
+#rebuild Correlation.class which only depends
+#on Correlation.java
+
 Correlation.class: Correlation.java
 
 #Make rule to clean the .class files
 
 clean:
-	@rm -f *.class 
-#$(SOURCE:.java.class)
+	@rm -vf *.class 
+
 
 

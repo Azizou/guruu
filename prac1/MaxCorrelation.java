@@ -11,6 +11,7 @@ class MaxCorrelation extends RecursiveTask<Integer>
    
    public MaxCorrelation(float[] crossCorrelation,int start, int stop)
    {
+	  SEQUENTIAL_THRESHOLD = Driver.SEQUENTIAL_THRESHOLD;
       this.start = start;
       this.stop = stop;
       this.crossCorrelation = crossCorrelation;
@@ -28,7 +29,6 @@ class MaxCorrelation extends RecursiveTask<Integer>
                max = i;
             }
          }
-         System.out.println("I is" + max);
          return max;
       }
       else 
